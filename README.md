@@ -2,6 +2,8 @@
 
 A personal project with a simulation of the classic Thomson Problem, where it generates a random configuration of point charges on a sphere which settle into a stable configuration over time.
 
+![Thomson Animation](images/thomson-problem.gif)
+
 ## Mathematical Approach
 
 ### 1. The Objective Function
@@ -26,6 +28,32 @@ $$
 $$
 
 Points are displaced along this tangent using a dynamic learning rate scaled by the point count ($\alpha=1/N$), followed by Euclidean normalization ($\mathbf{r}/||\mathbf{r}||$) to strictly enforce the radius boundary.
+
+## Emergent Symmetries (Results)
+By modifying the $N$ parameter, the algorithm successfully breaks symmetry and converges on known Platonic solids and optimal geometric configurations:
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/4-points.png" width="300"/><br>
+      <b>N = 4 (Tetrahedron)</b>
+    </td>
+    <td align="center">
+      <img src="images/5-points.png" width="300"/><br>
+      <b>N = 5 (Triangular Bipyramid)</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/6-points.png" width="300"/><br>
+      <b>N = 6 (Octahedron)</b>
+    </td>
+    <td align="center">
+      <img src="images/8-points.png" width="300"/><br>
+      <b>N = 8 (Square Antiprism)</b>
+    </td>
+  </tr>
+</table>
 
 ## Requirements & Usage
 Built entirely with standard data science libraries for highly readable, vectorized execution.
